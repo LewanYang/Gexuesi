@@ -1,0 +1,209 @@
+/*小方块式产品列表*/
+.square-list{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.square-list .item{
+    display: inline-block;
+    width: 23%;
+    margin-left: 1%;
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+    padding:0;
+    cursor: pointer;
+}
+
+.square-list .item:hover .caption{
+    opacity: 1;
+    top:80%;
+
+}
+
+.square-list .item img{
+    float: left;
+    width: 100%;
+    height: auto;
+    z-index: 4;
+}
+
+.square-list .item .caption{
+    position: absolute;
+    opacity:0;
+    width: 100%;
+    height: 20%;
+    top:100%;
+    padding: 0;
+    -webkit-transition:all 0.15s ease-in-out;
+    -moz-transition:all 0.15s ease-in-out;
+    -o-transition:all 0.15s ease-in-out;
+    -ms-transition:all 0.15s ease-in-out;
+    transition:all 0.15s ease-in-out;
+}
+
+.square-list .item .caption .blur{
+    background-color: rgba(255,255,255,0.7);
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    position: absolute;
+}
+
+.square-list .item .caption .caption-text{
+    z-index: 10;
+    color:black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.square-list .item .caption .caption-text p{
+    font-size: 1rem;
+    margin: 0 0 0 1rem;
+}
+
+
+@media only screen and (max-width: 50em){
+    .square-list .item{
+        width:48%;
+    }
+}
+
+@media only screen and (max-width: 30em){
+    .square-list .item{
+        display: block;
+        width:80%;
+        margin: 1rem auto;
+    }
+}
+
+
+/*左图片又描素展示框*/
+.buy-list{
+    width: 80%;
+    margin: 2rem auto;
+}
+
+.buy-list .item{
+    width: 100%;
+    height:15rem;
+    border-bottom: 1px solid grey;
+    padding: 5px;
+    margin-bottom: 2px;
+}
+
+.buy-list .item .buy-list-picture{
+    height: 100%;
+    float: left;
+    width: 45%;
+}
+
+.buy-list .item .buy-list-picture img{
+    width: 100%;
+    height:100%;
+}
+
+.buy-list .item .buy-list-description{
+    overflow: hidden;
+    float: left;
+    width: 40%;
+    height: 100%;
+    position: relative;
+}
+
+.buy-list .item .buy-list-description p{
+    margin-left: 1rem;
+}
+
+.buy-list .item .buy-list-description p:first-child{
+    position: absolute;
+    top: 3rem;;
+}
+
+.buy-list .item .buy-list-description p:nth-child(2){
+    position: absolute;
+    top: 8rem;
+}
+
+
+.buy-list .item .buy-list-button{
+    float: right;
+    width: 10%;
+    height: 100%;
+}
+
+.buy-list .item .buy-list-button a{
+    display: block;
+    width: 90%;
+    margin: 5rem auto;
+    line-height: 5rem;
+    max-width: 12rem;
+    text-align: center;
+    text-decoration: none;
+    color:#fff;
+    background-color: #ff9900;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 50em){
+    .buy-list .item{
+        height:auto;
+        border-bottom: 0;
+    }
+
+    .buy-list .item .buy-list-picture{
+        display: block;
+        float: none;
+        width: 100%;
+    }
+
+    .buy-list .item .buy-list-picture img{
+        width: 100%;
+        height: auto;
+    }
+
+    .buy-list .item .buy-list-description{
+        float: left;
+        width: 70%;
+        position: static;
+        height: 7rem;
+    }
+
+    .buy-list .item .buy-list-description p{
+        position: static;
+    }
+
+    .buy-list .item .buy-list-description p:first-child{
+        position: static;
+    }
+
+    .buy-list .item .buy-list-description p:nth-child(2){
+        position: static;
+    }
+
+    .buy-list .item .buy-list-button{
+        float: right;
+        width: 25%;
+        height: 7rem;
+    }
+
+    .buy-list .item .buy-list-button a{
+        width: 80%;
+        margin: 3px auto;
+        line-height: 5rem;
+    }
+}
+
+@media only screen and (max-width: 30em){
+    .buy-list .item .buy-list-description{
+        height: 8rem;
+    }
+
+    .buy-list .item .buy-list-button{
+        height: 8rem;
+    }
+}
+

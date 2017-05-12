@@ -5,7 +5,7 @@ $(document).ready(function () {
         loop: true,
         autoplay: true,
         autoplayTimeout: 3000,
-        //autoplayHoverPause: true
+        autoplayHoverPause: true
     });
 
     //实现3D旋转效果
